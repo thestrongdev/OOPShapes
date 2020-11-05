@@ -1,0 +1,13 @@
+C:\Users\goods\source\repos\OOPShapes\bin\Debug\netcoreapp3.1\OOPShapes.exe
+C:\Users\goods\source\repos\OOPShapes\bin\Debug\netcoreapp3.1\OOPShapes.deps.json
+C:\Users\goods\source\repos\OOPShapes\bin\Debug\netcoreapp3.1\OOPShapes.runtimeconfig.json
+C:\Users\goods\source\repos\OOPShapes\bin\Debug\netcoreapp3.1\OOPShapes.runtimeconfig.dev.json
+C:\Users\goods\source\repos\OOPShapes\bin\Debug\netcoreapp3.1\OOPShapes.dll
+C:\Users\goods\source\repos\OOPShapes\bin\Debug\netcoreapp3.1\OOPShapes.pdb
+C:\Users\goods\source\repos\OOPShapes\obj\Debug\netcoreapp3.1\OOPShapes.csprojAssemblyReference.cache
+C:\Users\goods\source\repos\OOPShapes\obj\Debug\netcoreapp3.1\OOPShapes.AssemblyInfoInputs.cache
+C:\Users\goods\source\repos\OOPShapes\obj\Debug\netcoreapp3.1\OOPShapes.AssemblyInfo.cs
+C:\Users\goods\source\repos\OOPShapes\obj\Debug\netcoreapp3.1\OOPShapes.csproj.CoreCompileInputs.cache
+C:\Users\goods\source\repos\OOPShapes\obj\Debug\netcoreapp3.1\OOPShapes.dll
+C:\Users\goods\source\repos\OOPShapes\obj\Debug\netcoreapp3.1\OOPShapes.pdb
+C:\Users\goods\source\repos\OOPShapes\obj\Debug\netcoreapp3.1\OOPShapes.genruntimeconfig.cache
