@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace OOPShapes
 {
@@ -6,11 +8,13 @@ namespace OOPShapes
     {
         static void Main(string[] args)
         {
-            GetLength();
+            //GetSquareLength();
+            GetTriangleLength();
         }
 
-        static void GetLength()
+        static void GetSquareLength()
         {
+            Console.WriteLine("Welcome to the Square Class");
             do
             {
                 Console.WriteLine("please input a side length for a square: ");
@@ -31,11 +35,54 @@ namespace OOPShapes
             } while (Continue());
         }
 
+        static void GetTriangleLength()
+        {
+            Console.WriteLine("Welcome to the triangle class");
+
+            do
+            {
+                Console.WriteLine("\nPlease input 3 side lengths for a triangle separated by a space");
+                string userLength = Console.ReadLine();
+
+                string[] userTriangleLengths = userLength.Split();
+                List<double> triangleLengths = new List<double>();
+
+                bool anyNonNum = false;
+
+                foreach (string item in userTriangleLengths) {
+
+                    if (double.TryParse(item, out double sidelength))
+                    {
+                        triangleLengths.Add(sidelength);
+                    }
+                    else
+                    {
+                        anyNonNum = true;
+                    }
+                }
+
+                if (anyNonNum)
+                {
+                    Console.WriteLine("INVALID ENTRY!");
+                    continue;
+                }
+
+                Triangle newTriangle = new Triangle();
+                newTriangle.side1Length = triangleLengths[0];
+                newTriangle.side2Length = triangleLengths[1];
+                newTriangle.side3length = triangleLengths[2];
+
+                Console.WriteLine($"\nThis triangle has side lengths {newTriangle.side1Length}, {newTriangle.side2Length}, and {newTriangle.side3length}. " +
+                    $"Its area is {newTriangle.CalculateArea()} and its perimeter is {newTriangle.CalculatePerimeter()}");
+
+
+            } while (Continue());
+        }
 
 
         static bool Continue()
         {
-            Console.WriteLine("Would you like to continue (y/n)?");
+            Console.WriteLine("\nWould you like to continue (y/n)?");
 
             do
             {
