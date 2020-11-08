@@ -8,8 +8,96 @@ namespace OOPShapes
     {
         static void Main(string[] args)
         {
-            //GetSquareLength();
-            GetTriangleLength();
+            ChooseShape();
+        }
+
+
+        static void ChooseShape()
+        {
+            //dictionary list
+            var shapes = new Dictionary<string, string> ();
+            shapes.Add("1", "square");
+            shapes.Add("2", "triangle");
+            shapes.Add("3", "circle");
+            shapes.Add("q", "quit");
+
+            var keys = shapes.Keys;
+            var values = shapes.Values;
+            bool cont = true;
+
+            do
+            {
+                Console.WriteLine("Enter a new shape. Square(1), Triangle(2), Circle(3), or Quit(q)");
+                string userShape = Console.ReadLine();
+                Console.WriteLine();
+
+                userShape.ToLower();
+
+                if (shapes.ContainsKey(userShape) || shapes.ContainsValue(userShape)){ //technically I don't really need a dictionary list here...Could just use the if stmt
+                       
+                    if (userShape.Equals("square", StringComparison.OrdinalIgnoreCase) || userShape.Equals("1"))
+                    {
+                        GetSquareLength();
+                                
+                    }
+                    else if (userShape.Equals("triangle", StringComparison.OrdinalIgnoreCase) || userShape.Equals("2"))
+                    {
+                        GetTriangleLength();
+                    }
+                    else if (userShape.Equals("circle", StringComparison.OrdinalIgnoreCase) || userShape.Equals("3"))
+                    {
+                        GetCircle();
+                    }
+                    else
+                    {
+                        Console.WriteLine("GOODBYE");
+                        cont = false;        
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Please input a valid entry (number or shape)");
+                }
+
+            } while (cont);
+
+        }
+
+        static void GetCircle()
+        {
+
+            Console.WriteLine("Welcome to Circle Class");
+            double numberCircles = 0;
+            bool keepGoing = true;
+
+            do
+            {
+
+                Console.WriteLine("\nPlease enter a value for the circle radius: ");
+
+                string userRadius = Console.ReadLine();
+
+                if (!Validator.IsDouble(userRadius))
+                {
+                    Console.WriteLine("Please try again and enter a numerical value");
+                    continue;
+                }
+                else
+                {
+                    double.TryParse(userRadius, out double radius);
+                    var theCircle = new Circle(radius);
+                    numberCircles += 1;
+                    Console.WriteLine();
+                    Console.WriteLine(theCircle.CalculateFormattedCircumference());
+                    Console.WriteLine(theCircle.CalculateFormattedArea());
+                    Console.WriteLine();
+                    keepGoing = Continue();
+                }
+
+            } while (keepGoing);
+
+            Console.WriteLine($"You created {numberCircles} circle object(s)");
         }
 
         static void GetSquareLength()
