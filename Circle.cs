@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOPShapes
 {
-    class Circle
+    class Circle : ShapeBase
     {
         private double _radius; //diameter is 2 * radius
 
@@ -17,7 +17,7 @@ namespace OOPShapes
             Radius = radius;
         }
 
-        public double CalculateCircumference() //2 * pi * radius
+        public override double CalculatePerimeter() //actually circumference but must inherit from BASE class; 2 * pi * radius
         {
             double circumference = 2 * PI * Radius;
             return circumference;
@@ -25,10 +25,10 @@ namespace OOPShapes
 
         public string CalculateFormattedCircumference()
         {
-            return $"Circumference: {FormatNumber(this.CalculateCircumference())}";
+            return $"Circumference: {FormatNumber(this.CalculatePerimeter())}";
         }
 
-        public double CalculateArea() // pi * radius^2
+        public override double CalculateArea() // pi * radius^2
         {
             double area = PI * Radius * Radius;
             return area;

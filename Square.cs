@@ -4,16 +4,16 @@ using System.Text;
 
 namespace OOPShapes
 {
-    class Square
+    class Square : ShapeBase
     {
-        public int SideLength { get; set; }
+        public double SideLength { get; set; }
 
-        public int CalculatePerimeter()
+        public override double CalculatePerimeter()
         {
             return 4 * SideLength;
         }
 
-        public int CalculateArea()
+        public override double CalculateArea()
         {
             return 2 * SideLength;
         }

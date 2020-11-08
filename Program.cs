@@ -124,9 +124,9 @@ namespace OOPShapes
 
             } while (Continue());
 
-            List<int> sides = new List<int>();
-            List<int> area = new List<int>();
-            List<int> perim = new List<int>();
+            List<double> sides = new List<double>();
+            List<double> area = new List<double>();
+            List<double> perim = new List<double>();
 
             for (int i = 0; i<squareList.Count(); i++)
             {
